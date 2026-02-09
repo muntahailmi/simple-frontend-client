@@ -110,6 +110,7 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             // resultDiv.innerHTML = "<em>Sending...</em>";
+            resultStat.className = `status-badge`
             resultStat.textContent = "Sending...";
 
             const url = document.getElementById('apiUrl').value;
@@ -154,6 +155,7 @@
                 //     </div>
                 //     <textarea class="result-text" readonly>${resText}</textarea>
                 // `;
+                resultStat.className = `status-badge ${statusClass}`
                 resultStat.textContent = `${response.status} ${response.statusText}`;
                 resultText.value = resText;
             } catch (err) {
@@ -161,6 +163,7 @@
                 //     <div class="status-badge status-err">Error</div>
                 //     <textarea class="result-text" readonly>${err.message}</textarea>
                 // `;
+                resultStat.className = `status-badge status-err`
                 resultStat.textContent = "Error";
                 resultText.value = err.message;
             }
