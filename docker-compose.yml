@@ -1,5 +1,7 @@
 services:
   web:
     build: .
+    environment:
+      - PORT=6123
     ports:
       - "4000:6123"
