@@ -1,7 +1,5 @@
 services:
   web:
-    build: .
-    environment:
-      - PORT=6123
+    image: ${APP_IMAGE}
     ports:
-      - "4000:6123"
+      - "4000:80"
