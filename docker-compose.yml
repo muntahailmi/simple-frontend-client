@@ -3,3 +3,4 @@ services:
     image: ${APP_IMAGE}
     ports:
       - "4000:80"
+    env_file: .env
